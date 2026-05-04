@@ -12,7 +12,7 @@ This project documents the design and implementation of a virtualized home netwo
 | Component | Details |
 |---|---|
 | Host OS | Windows 10/11 |
-| Hypervisor | Oracle VirtualBox 7.1.10 |
+| Hypervisor | VMWare Workstation 17 Pro 17.6.4 |
 | Router / Firewall | OPNsense (pfSense CE equivalent) |
 | Attack VM | Kali Linux |
 | Server Target | Ubuntu Server 22.04 LTS |
