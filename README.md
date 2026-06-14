@@ -135,11 +135,17 @@ Three VLANs created on parent interface em2 following the IEEE 802.1Q standard, 
 > <img width="923" height="445" alt="5  802 1Q VLAN config" src="https://github.com/user-attachments/assets/31ea2344-3326-4061-bd83-06b98cf03a70" />
  — Interfaces → Devices showing VLAN10, VLAN20, VLAN99 created on em2
 >
-> 📸 **Screenshot:** `screenshots/vlans/02-vlan10-interface.png` — VLAN10 (OPT2) interface configuration, 10.0.10.1/24
+> 📸 **Screenshot:**
+> <img width="1839" height="1777" alt="12  vlan10 interface configuration" src="https://github.com/user-attachments/assets/ce16d945-fde7-49cb-a079-759792fa8ded" />
+ — VLAN10 (OPT2) interface configuration, 10.0.10.1/24
 >
-> 📸 **Screenshot:** `screenshots/vlans/03-vlan20-interface.png` — VLAN20 (OPT3) interface configuration, 10.0.20.1/24
+> 📸 **Screenshot:**
+> <img width="1831" height="1778" alt="13  vlan20 interface configuration" src="https://github.com/user-attachments/assets/3d5885d9-8ed4-4d39-adfb-a6c7addacb17" />
+ — VLAN20 (OPT3) interface configuration, 10.0.20.1/24
 >
-> 📸 **Screenshot:** `screenshots/vlans/04-vlan99-interface.png` — VLAN99 (OPT4) interface configuration, 10.0.99.1/24
+> 📸 **Screenshot:**
+> <img width="1839" height="1777" alt="14  vlan99 interface configuration" src="https://github.com/user-attachments/assets/9ddc759d-dd4c-4d6d-9f62-04b6127feb30" />
+ — VLAN99 (OPT4) interface configuration, 10.0.99.1/24
 
 ### DHCP Configuration — Kea DHCPv4
 
@@ -157,7 +163,9 @@ OPNsense 26.1.6 uses Kea DHCP rather than the legacy ISC DHCP server. Three subn
 > <img width="923" height="449" alt="7  DHCP subnets 2" src="https://github.com/user-attachments/assets/6c8a5681-f25c-421d-a1b7-9e3fdf828531" />
  — Kea DHCPv4 → Subnets showing all three subnets configured
 >
-> 📸 **Screenshot:** `screenshots/opnsense/05-kea-settings.png` — Kea DHCPv4 → Settings showing service enabled and interfaces selected
+> 📸 **Screenshot:**
+> <img width="923" height="448" alt="15  Kea DHCPv4 settings service enabled" src="https://github.com/user-attachments/assets/25b4a087-1f86-4f10-8608-fb92ca617a93" />
+ — Kea DHCPv4 → Settings showing service enabled and interfaces selected
 
 ### Firewall Rules — Implemented (Deny-by-Default)
 
@@ -195,7 +203,9 @@ All interfaces in OPNsense default to deny-all until explicit rules are added. R
 | Block | any | VLAN99 net | LAN net | Block attack VLAN from management |
 | Block | any | any | any | Default deny — VLAN99 |
 
-> 📸 **Screenshot:** `screenshots/firewall-rules/01-opt1-rules.png` — Firewall → Rules → OPT1
+> 📸 **Screenshot:**
+> <img width="923" height="445" alt="16  firewall rules opt1" src="https://github.com/user-attachments/assets/e02f9739-2977-4e42-84dc-639b7980bc40" />
+ — Firewall → Rules → OPT1
 >
 > 📸 **Screenshot:**
 > <img width="920" height="443" alt="8  VLAN10 firewall rules" src="https://github.com/user-attachments/assets/5f02380f-372d-4d1b-88df-16d4fbaf3cf6" />
@@ -217,9 +227,13 @@ All interfaces in OPNsense default to deny-all until explicit rules are added. R
 - Deny-by-default firewall posture confirmed on every interface (OPT1, VLAN10, VLAN20, VLAN99)
 - VLAN99 explicitly blocked from WAN and from the management network
 
-> 📸 **Screenshot:** `screenshots/opnsense/06-https-admin-settings.png` — System → Settings → Administration showing HTTPS / port 8443
+> 📸 **Screenshot:**
+> <img width="923" height="445" alt="17  showing https" src="https://github.com/user-attachments/assets/88faf193-125b-42ab-8eab-c4f66ef4c243" />
+ — System → Settings → Administration showing HTTPS / port 8443
 >
-> 📸 **Screenshot:**  — OPNsense dashboard accessed via https://192.168.91.10:8443
+> 📸 **Screenshot:**
+> <img width="955" height="476" alt="18  opnsense dashboard" src="https://github.com/user-attachments/assets/dc7410fb-f0dc-4a8a-b7ce-c9b5552e858c" />
+ — OPNsense dashboard accessed via https://192.168.91.2:8443
 
 ---
 
