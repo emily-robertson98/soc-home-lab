@@ -37,7 +37,7 @@ This project documents the design and implementation of a virtualized home netwo
             |
    [ OPNsense 26.1.6 Firewall / Router ]
             |
-   [ LAN — em0 — VMnet8 (NAT), 192.168.91.10/24 ]
+   [ LAN — em0 — VMnet8 (NAT), 192.168.91.2/24 ]
        (Management — web UI access, https://192.168.91.10:8443)
             |
    [ OPT1 (LABLAN) — em2 — VMnet2 (Host-only), 10.0.1.0/24 ]
@@ -63,7 +63,7 @@ This project documents the design and implementation of a virtualized home netwo
 | Network | Subnet | Gateway | VMware Network | Status |
 |---|---|---|---|---|
 | WAN | 192.168.91.0/24 (DHCP from VMware NAT) | 192.168.91.2 | VMnet8 (NAT) | Active — conflicts with LAN, see Troubleshooting |
-| Management (LAN) | 192.168.91.0/24 | 192.168.91.10 | VMnet8 (NAT) | Active — web UI access |
+| Management (LAN) | 192.168.91.0/24 | 192.168.91.2 | VMnet8 (NAT) | Active — web UI access |
 | Lab LAN (OPT1/LABLAN) | 10.0.1.0/24 | 10.0.1.1 | VMnet2 (Host-only) | Active — Kali, Ubuntu Server |
 | VLAN 10 — Workstations | 10.0.10.0/24 | 10.0.10.1 | (tagged on em2) | Configured, no VMs assigned yet |
 | VLAN 20 — Servers | 10.0.20.0/24 | 10.0.20.1 | (tagged on em2) | Configured, no VMs assigned yet |
@@ -110,7 +110,7 @@ This project documents the design and implementation of a virtualized home netwo
 
 | Interface | Name | IP | Role |
 |---|---|---|---|
-| em0 | LAN | 192.168.91.10/24 | Management — web UI |
+| em0 | LAN | 192.168.91.2/24 | Management — web UI |
 | em1 | WAN | DHCP via VMnet8 (192.168.91.x) | Internet |
 | em2 | OPT1/LABLAN | 10.0.1.1/24 | Lab network — Kali, Ubuntu Server |
 | vlan0.10 (on em2) | OPT2/VLAN10 | 10.0.10.1/24 | Workstation segment |
@@ -223,7 +223,7 @@ All interfaces in OPNsense default to deny-all until explicit rules are added. R
 
 - Default OPNsense root password changed during installation
 - Admin password changed via setup wizard
-- Web UI moved from HTTP to HTTPS on port 8443 (`https://192.168.91.10:8443`) — self-signed certificate, browser shows "not secure" as expected for a lab environment
+- Web UI moved from HTTP to HTTPS on port 8443 (`https://192.168.91.2:8443`) — self-signed certificate, browser shows "not secure" as expected for a lab environment
 - Deny-by-default firewall posture confirmed on every interface (OPT1, VLAN10, VLAN20, VLAN99)
 - VLAN99 explicitly blocked from WAN and from the management network
 
