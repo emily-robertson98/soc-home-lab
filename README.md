@@ -311,20 +311,20 @@ All screenshots referenced inline above are summarized here, organized by repo f
 
 **`screenshots/opnsense/`**
 - [X] `00-vmware-vm-list.png` — VMware library: OPNsense, Kali, Ubuntu-Server
-- [ ] `02-interfaces.png` — Interfaces → Assignments (all 6 interfaces)
+- [X] `02-interfaces.png` — Interfaces → Assignments (all 6 interfaces)
 - [X] `04-kea-subnets.png` — Kea DHCPv4 → Subnets
-- [ ] `05-kea-settings.png` — Kea DHCPv4 → Settings
-- [ ] `06-https-admin-settings.png` — Administration → HTTPS / port 8443
-- [ ] `07-dashboard-https.png` — Dashboard via https://192.168.91.10:8443
+- [X] `05-kea-settings.png` — Kea DHCPv4 → Settings
+- [X] `06-https-admin-settings.png` — Administration → HTTPS / port 8443
+- [X] `07-dashboard-https.png` — Dashboard via https://192.168.91.10:8443
 
 **`screenshots/vlans/`**
 - [X] `01-vlan-devices.png` — Interfaces → Devices (VLAN10/20/99 on em2)
-- [ ] `02-vlan10-interface.png` — VLAN10 (OPT2) config
-- [ ] `03-vlan20-interface.png` — VLAN20 (OPT3) config
-- [ ] `04-vlan99-interface.png` — VLAN99 (OPT4) config
+- [X] `02-vlan10-interface.png` — VLAN10 (OPT2) config
+- [X] `03-vlan20-interface.png` — VLAN20 (OPT3) config
+- [X] `04-vlan99-interface.png` — VLAN99 (OPT4) config
 
 **`screenshots/firewall-rules/`**
-- [ ] `01-opt1-rules.png` — Firewall rules: OPT1
+- [X] `01-opt1-rules.png` — Firewall rules: OPT1
 - [X] `02-vlan10-rules.png` — Firewall rules: VLAN10
 - [X] `03-vlan20-rules.png` — Firewall rules: VLAN20
 - [X] `04-vlan99-rules.png` — Firewall rules: VLAN99
